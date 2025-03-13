@@ -1,4 +1,4 @@
-# AIpapillae: automatic identification of Fungiform Papillae**
+# AIpapillae: automatic identification of Fungiform Papillae
 
 ## 📚 About
 This project contains the technical materials used to achieve the results shared in our research project:  
