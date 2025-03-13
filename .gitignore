@@ -1,0 +1,20 @@
+# Ignore system files
+__pycache__
+*.pyc
+# Ignore the weight directory
+#*/weights
+
+# Ignore the results directory
+*/*/
+
+#Ignore txt
+*.txt
+
+.Rhistory
+*/weights/
+*.hdf5
+*.png
+
+# Ignore jupiter files
+*.ipynb
+
