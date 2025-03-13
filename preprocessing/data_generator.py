@@ -1,7 +1,6 @@
 import argparse
 import os
 from glob import glob 
-from tqdm import tqdm 
 import cv2
 import numpy as np
 from skimage import measure, io, transform, exposure
