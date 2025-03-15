@@ -26,7 +26,7 @@ def clahe_enhancement(image, threshold, grid_size=(16, 16)):
     :param threshold: clipping threshold
     :param grid_size: local neighbourhood
     :return: enhanced image
-        """
+    """
     clahe = cv2.createCLAHE(clipLimit=threshold, tileGridSize=grid_size)
     enhanced_image = clahe.apply(image)
     cdf = get_cdf_hist(enhanced_image)
@@ -96,7 +96,7 @@ def process_image(input_image_path, sub_processed_dir, processed_dir, NoEllipse_
     cv2.imwrite(save_path, resized)
     print(f"Processed and saved image: {save_path}")
 
-    #Clache RGB
+    #CLAHE RGB
     I_masked = np.zeros_like(I_OK)
     img = cv2.cvtColor(I_OK, cv2.COLOR_RGB2Lab)
     clahe = cv2.createCLAHE(clipLimit=10,tileGridSize=(2,2))
