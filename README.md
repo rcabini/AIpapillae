@@ -59,7 +59,7 @@ The core objective of this project is to **automate the identification of the Fu
 
 ## 💻 Setup Your Environment
 
-1. **Install Python:** Version 3.9 or higher.
+1. **Install Python:** Version 3.9.
 2. **Clone or Download the project from this repository:**  
    ```
    git clone <https://github.com/rcabini/AIpapillae>
