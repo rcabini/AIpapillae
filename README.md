@@ -64,12 +64,7 @@ The core objective of this project is to **automate the identification of the Fu
    ```
    git clone <https://github.com/rcabini/AIpapillae>
    ```
-3. **Install the required dependencies:**
-   ```
-   pip install -r requirements.txt
-   ```
-   
-4. **Install the virtual environment with Anaconda:**
+3. **Install the virtual environment with Anaconda:**
    ```
    conda env create -f environment.yml
       conda activate environment
