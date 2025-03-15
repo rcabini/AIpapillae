@@ -38,18 +38,18 @@ def create_dots(args):
 def create_spots(args):
     output_path = args.output_spots_folder
     label_path = args.output_dots_folder
-    # Assicurazione che la directory di output esista
+    # Ensure that the output directory exists
     os.makedirs(output_path, exist_ok=True)
 
-    # Trovare tutte le immagini che finiscono con ".png"
+    # Find all images that end with ".png"
     label_files = glob(os.path.join(label_path, '*.png'))
 
-    # Ordinare il file del label(puntini)
+    # Sort the label file(dots)
     label_files.sort()
 
     TH = 40
 
-    # creare un loop per creare un immagine che contiene spots per tutta la dataset
+    # create a loop to create an image that contains spots for the entire dataset
     for lbl_file in label_files:
         base = lbl_file.split('/')[-1]
         print(base)
@@ -63,13 +63,13 @@ def create_spots(args):
           output[:,:,k]  = cv2.GaussianBlur(lab, ksize=(0,0), sigmaX=5, borderType=cv2.BORDER_ISOLATED)
         smooth = np.max(output, axis=-1) 
 
-        # Normalizzo l'output
+        # normalize the output
         smooth = (smooth - smooth.min()) / (smooth.max() - smooth.min()) * 255.
 
-        # Costruisco il nome del file di output
+        # Create the output file name
         output_file = os.path.join(output_path, base)
 
-        # Salvo l'immagine di output
+        # Save the output image
         io.imsave(output_file, smooth.astype(np.uint8))
 
         print(f"Salvato: {output_file}")
