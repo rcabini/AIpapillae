@@ -6,8 +6,8 @@ from skimage.feature import peak_local_max
 #---------------------------------------------------------------------------
 
 def error_papillae(gt, pred, TH):
-    coordinates_gt = peak_local_max(gt, min_distance=5, exclude_border=False)#lala ha messo 10, raffaella 5
-    coordinates_pred = peak_local_max(pred, min_distance=5, exclude_border=False)#lala ha messo 10, raffaella 5/!\ size spots forse grandi
+    coordinates_gt = peak_local_max(gt, min_distance=5, exclude_border=False)
+    coordinates_pred = peak_local_max(pred, min_distance=5, exclude_border=False)
     N = len(coordinates_gt)
     dist_TP = []
     TP_gt = []
